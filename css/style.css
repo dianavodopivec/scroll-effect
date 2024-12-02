@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Orbitron:wght@400..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    color: #494eaf;
+	background: #242455;
+	overflow-x: hidden;
+    overscroll-behavior: none;
+}
+
+body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: calc(15vh + 1px);
+	pointer-events: none;
+	z-index: 2000;
+	background-image: linear-gradient(0deg, rgb(0 0 0 / 68%), rgb(15 10 23 / 62%));
+	box-shadow: 0px 0px 10vh rgba(0,0,0,0.8);
+}
+
+/* main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.content {
+	width: 100%;
+	display: flex; 
+	justify-content: center; 
+	align-items: flex-start; 
+	position: relative;
+	flex-wrap: wrap; 
+	gap: 10vw 10vh; 
+	padding: 0 1rem 20vh;
+	margin: 15vh auto 0;
+    background-image: linear-gradient(to right, #0f172a, #242c55, #0f172a);
+	background-size: 100%, 100% 100vh;
+	background-attachment: fixed;
+}
+
+.content__title {
+    width: 100%;
+    display: flex;
+	justify-content: center;
+    white-space: nowrap;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 0.5;
+    font-family: "Orbitron", sans-serif;
+    font-size: 8rem;
+    font-weight: 900;
+    margin: 0;
+    mix-blend-mode: difference;
+    color: #545db9;
+}
+
+/* .content__title:not(:first-child) {
+	margin: 10vh auto;
+} */
+
+.item {
+	width: 100%;
+    max-width: 300px;
+    position: relative;
+    justify-self: center;
+    align-self: center;
+	aspect-ratio: 2/3;
+	margin: 0;
+}
+
+.item__img {
+    width: 100%;
+	height: 100%;
+	position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	overflow: hidden;
+    
+}
+
+.item__img-inner {
+    width: 100%;
+	height: 100%;
+	position: relative;
+	background-size: cover;
+    border-radius: 5px;
+}
+
+.item__info {
+	display: grid;
+	place-items: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	mix-blend-mode: plus-lighter;
+}
+
+.item__info-title {
+    font-family: "Orbitron", sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #494eaf;
+    margin-bottom: 20px;
+}
+
+/* REFLECTION CSS */
+
+.wrap {
+	width: 100%;
+	height: 15vh;
+	top: 0;
+    position: fixed;
+	background: #242455;
+	box-shadow: 0 -25px 45px rgba(0,0,0,0.3);
+	transform: scaleY(-1);
+	overflow: hidden;
+}
+
+.content--reflection {
+	position: absolute;
+	top: 0;
+	margin: 0 auto;
+}
