@@ -46,7 +46,7 @@ body::before {
     gap: 192px ;
     padding: 0 16px 216px;
 	margin: 140px auto 0;
-    background-image: linear-gradient(to right, #0f172a85, #242455, #0f172a);
+    background-image: linear-gradient(to right, #000000, #242455, #000000);
 	background-size: 100%, 100% 100vh;
 	background-attachment: fixed;
 }
@@ -64,7 +64,7 @@ body::before {
     font-weight: 900;
     margin: 0;
     mix-blend-mode: difference;
-    color: #545db9;
+    color: #494eaf;
 }
 
 /* .content__title:not(:first-child) {
