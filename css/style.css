@@ -105,7 +105,7 @@ body::before {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	mix-blend-mode: plus-lighter;
+    mix-blend-mode: difference;
 }
 
 .item__info-title {

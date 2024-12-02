@@ -3,16 +3,15 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-
+//DOM ELEMENTS
 const $content = document.querySelector(".content");
 const $reflection = document.querySelector(".content--reflection")
 const $items = [...$content.querySelectorAll(".item__img")]
 const $itemReflection = [...$reflection.querySelectorAll(".item__img")]
 
-
 const initSmoothScrolling = () => {
     const lenis = new Lenis({
-        lerp: 0.2, 
+        lerp: 0.5, 
         smoothWheel: true 
     });
 
