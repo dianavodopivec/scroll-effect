@@ -67,10 +67,6 @@ body::before {
     color: #494eaf;
 }
 
-/* .content__title:not(:first-child) {
-	margin: 10vh auto;
-} */
-
 .item {
 	width: 100%;
     max-width: 300px;
