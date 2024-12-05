@@ -1,21 +1,21 @@
-import Lenis from 'lenis';
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lenis from 'lenis'
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger);
 
 //DOM ELEMENTS
-const $content = document.querySelector(".content");
+const $content = document.querySelector(".content")
 const $reflection = document.querySelector(".content--reflection")
 const $items = [...$content.querySelectorAll(".item__img")]
 const $itemReflection = [...$reflection.querySelectorAll(".item__img")]
 
 const initSmoothScrolling = () => {
     const lenis = new Lenis({
-        lerp: 0.5, 
+        lerp: 0.1, 
         smoothWheel: true 
     });
 
-    lenis.on('scroll', () => ScrollTrigger.update);
+    lenis.on('scroll', () => ScrollTrigger.update)
 
     const scrollFn = (time) => {
         lenis.raf(time); 
@@ -29,8 +29,8 @@ const initSmoothScrolling = () => {
 const scrollAnimations = () => {
     $items.forEach((item, index) => {
         const reflectionItem = $itemReflection[index];
-        const $itemImgInner = item.querySelector(".item__img-inner");
-        const $reflectionImgInner = reflectionItem.querySelector(".item__img-inner");
+        const $itemImgInner = item.querySelector(".item__img-inner")
+        const $reflectionImgInner = reflectionItem.querySelector(".item__img-inner")
         
         gsap.timeline({
             scrollTrigger: {
@@ -55,13 +55,13 @@ const scrollAnimations = () => {
         }, {
             ease: 'back.inOut',
             scale: 1.3
-        }, 0);
-    });
-};
+        }, 0)
+    })
+}
 
 const handleFunctions = () => {
-    initSmoothScrolling(); 
-    scrollAnimations(); 
+    initSmoothScrolling()
+    scrollAnimations()
 };
 
 handleFunctions()
